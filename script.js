@@ -8,13 +8,13 @@ let store2=[];
 /*function singleplayer()*/
 /*{
 	console.log(1);
-	document.getElementsByClassName("a").style.display="none";
-	document.getElementsByClassName("b").style.display="none";
-	document.getElementsByClassName("c").style.display="none";
-	document.getElementsByClassName("d").style.display="none";
-	document.getElementsByClassName("cell").style.display="block";
-	document.getElementsByClassName("button").style.display="none";
-	document.getElementsByClassName("e").style.display="block";
+	document.querySelector("a").style.display="none";
+	document.querySelector("b").style.display="none";
+	document.querySelector("c").style.display="none";
+	document.querySelector("d").style.display="none";
+	document.querySelector("cell").style.display="block";
+	document.querySelector("button").style.display="none";
+	document.querySelector("e").style.display="block";
 }*/
 
 function singleplayer()
@@ -22,7 +22,16 @@ function singleplayer()
 	var cells = document.querySelectorAll('.cell');
 	for(let i=0;i<cells.length;i++)
 		cells[i].addEventListener("click",put);
+
+	document.querySelector(".a").style.display="none";
+	document.querySelector(".b").style.display="none";
+	document.querySelector(".c").style.display="none";
+	document.querySelector(".d").style.display="none";
+	document.querySelector(".cell").style.display="block";
+	document.querySelector(".button2").style.display="none";
+	document.querySelector(".e").style.display="block";
 }
+
 function check1()
 {
 	for(var i=0;i<8;i++)
@@ -68,9 +77,11 @@ function check1()
 		}
 	}
 }
+
 var z1=0,z2=0;
 function put(x){
 	var id=x.target.id;
+	console.log(id);
 	if(!check[parseInt(id)])
 	{if(c%2==0)
 		{document.getElementById(id).innerHTML="X";store1[z1]=parseInt(id);z1++;}
