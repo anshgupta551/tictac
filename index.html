@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript" src="script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rock+Salt&display=swap" rel="stylesheet">
+<style>
+body{
+background-image: url('4.jpg');
+background-attachment: fixed;
+background-repeat: no-repeat;
+background-size: cover;
+}
+*{
+	text-align: center;
+	line-height: 1.0;
+}
+.a{
+	display:block;
+	font-family:'Orbitron',cursive;
+	color:black;
+	text-align: center;
+	font-size: 75px;
+	text-shadow: 10px 10px 5px white;
+}
+.b{
+	display:block;
+	text-align: center;
+	font-size: 65px;
+	color:red;
+	text-shadow: 10px 10px 5px black;
+	border-radius: 5px;
+	border-color: blue;
+	padding: 15px 25px;
+	font-family:'Rock Salt', cursive;
+
+}
+h2:hover{
+	display:block;
+	text-align: center;
+text-shadow:10px 10px 5px blue;
+}
+.c,.d{
+	display:block;
+	text-align: center;
+	font-family:'Orbitron',cursive;
+	font-size: 30px;
+}
+.button {
+  background-color: #FC6B01;
+  color:black;
+  border:solid;
+  border-radius: 30px;
+  padding: 15px 25px;
+  text-align: center;
+  font-size: 35px;
+  cursor: pointer;
+  margin:10px;
+  font-family:'Rock Salt', cursive;
+}
+
+.button:hover {
+	text-align: center;
+  background-color:black;
+  color:#FC6B01;
+  font-family:'Rock Salt', cursive;
+}
+.cell{
+	display:none;
+	border:7px solid white;
+	height:150px;
+	width:150px;
+	vertical-align: middle;
+	font-size: 100px;
+	background-color: black;
+	color:white;
+	text-align: center;
+}
+#demo{
+	display:none;
+	font-size: 50px;
+	color:white;
+	text-align: left;
+}
+.e{
+	display:none;
+	border-collapse: collapse;
+	position:absolute;
+	left:41%;
+	border-width:thick;
+}
+table tr:first-child td{
+border-top:0;
+}
+table tr:last-child td{
+border-bottom:0;
+}
+table tr td:first-child{
+border-left:0;
+}
+table tr td:last-child{
+border-right:0;
+}
+
+</style>
+<body>
+<h1 class="a"><b>Welcome to our Game:</b></h1>
+<h2 class="b">"Tic-Tac-Toe!!"</h2>
+<p class="c"><b>Select the Game mode:</b></p>
+<button class="button" onclick="singleplayer()">Single Player Mode</button><p class="d"><b>OR</b></p>><button class="button">Two Player Mode</button>
+<div>
+	<table class="e">
+		<tr>
+			<td class="cell" id="0" onclick="put(id)"></td>
+			<td class="cell" id="1" onclick="put(id)"></td>
+			<td class="cell" id="2" onclick="put(id)"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="3" onclick="put(id)"></td>
+			<td class="cell" id="4" onclick="put(id)"></td>
+			<td class="cell" id="5" onclick="put(id)"></td>
+		</tr>
+		<tr>
+			<td class="cell" id="6" onclick="put(id)"></td>
+			<td class="cell" id="7" onclick="put(id)"></td>
+			<td class="cell" id="8" onclick="put(id)"></td>
+		</tr>
+	</table>
+</div>
+<div id="demo">defcgvbhnjkm</div>
+</body>
+</html>
