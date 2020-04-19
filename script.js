@@ -4,8 +4,8 @@ let triplets=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 let check=[0,0,0,0,0,0,0,0,0];
 let store1=[];
 let store2=[];
-function singleplayer()
-{
+/*function singleplayer()*/
+/*{
 	console.log(1);
 	document.getElementsByClassName("a").style.display="none";
 	document.getElementsByClassName("b").style.display="none";
@@ -14,7 +14,7 @@ function singleplayer()
 	document.getElementsByClassName("cell").style.display="block";
 	document.getElementsByClassName("button").style.display="none";
 	document.getElementsByClassName("e").style.display="block";
-}
+}*/
 function check1()
 {
 	for(var i=0;i<8;i++)
