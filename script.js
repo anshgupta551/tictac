@@ -4,6 +4,7 @@ let triplets=[[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
 let check=[0,0,0,0,0,0,0,0,0];
 let store1=[];
 let store2=[];
+// var cells = document.querySelectorAll('.cell');
 /*function singleplayer()*/
 /*{
 	console.log(1);
@@ -15,6 +16,13 @@ let store2=[];
 	document.getElementsByClassName("button").style.display="none";
 	document.getElementsByClassName("e").style.display="block";
 }*/
+
+function singleplayer()
+{
+	var cells = document.querySelectorAll('.cell');
+	for(let i=0;i<cells.length;i++)
+		cells[i].addEventListener("click",put);
+}
 function check1()
 {
 	for(var i=0;i<8;i++)
@@ -31,6 +39,10 @@ function check1()
 							document.getElementById(store1[j].toString()).style.backgroundColor = "lightblue";
 							document.getElementById(store1[k].toString()).style.backgroundColor = "lightblue";
 							document.getElementById(store1[l].toString()).style.backgroundColor = "lightblue";
+
+							var cells = document.querySelectorAll('.cell');
+							for(let i=0;i<cells.length;i++)
+								cells[i].removeEventListener("click",put);
 						}
 				}
 			}
@@ -57,7 +69,8 @@ function check1()
 	}
 }
 var z1=0,z2=0;
-function put(id){
+function put(x){
+	var id=x.target.id;
 	if(!check[parseInt(id)])
 	{if(c%2==0)
 		{document.getElementById(id).innerHTML="X";store1[z1]=parseInt(id);z1++;}
